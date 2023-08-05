@@ -1,0 +1,18 @@
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#commsBanner {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+#commsBanner.fade {
+  opacity: 0;
+}
+#serviceRate {
+  transition: opacity 0.4s ease-in-out;
+}
+#serviceRate.fade {
+  opacity: 1;
+}

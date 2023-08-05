@@ -1,0 +1,216 @@
+/* try to use 'vh' or 'vw' unit for dimensions */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  overflow-x: hidden;
+  background: url(./background.png);
+  background-size: cover;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100%;
+  min-width: 250px;
+  padding-top: 60px;
+  padding-right: 60px;
+  border-right: 10px double rgb(234, 220, 250);
+  text-align: center;
+  background-color: white; /* Add a background color to the header */
+  z-index: 999; /* Set a higher z-index to keep the header on top */
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  margin-left: 330px; /* Add margin to the main content to create space for the header */
+}
+
+.logo img {
+  margin-bottom: 30px;
+  width: 130%;
+}
+.nav-links ul li a {
+  row-gap: 100px;
+  margin-left: 40px;
+}
+
+.nav-links ul li {
+  margin-bottom: 70px;
+  list-style: none;
+  font-size: 22px;
+  letter-spacing: 2px;
+
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#slideshow img {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: auto;
+  height: auto;
+  max-width: 74%;
+  max-height: 76%;
+  background-color: white;
+  border-top: 10px double rgb(234, 220, 250);
+  border-bottom: 10px double rgb(234, 220, 250);
+  border-radius: 25px;
+}
+
+#slideshow img:nth-of-type(1) {
+  animation-name: fader;
+  animation-delay: 3s;
+  animation-duration: 1s;
+  z-index: 20;
+}
+#slideshow img:nth-of-type(2) {
+  z-index: 10;
+}
+#slideshow img:nth-of-type(n + 3) {
+  display: none;
+}
+
+@keyframes fader {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#tos {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  position: absolute;
+  margin: auto;
+
+  height: auto;
+  top: 90%; /* Adjust this value as needed */
+  left: 100;
+  width: 70.5%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border-top: 10px double rgb(234, 220, 250);
+  border-bottom: 10px double rgb(234, 220, 250);
+  border-radius: 25px;
+  background-color: white;
+}
+#tos h1,
+#payment h1,
+#process h1,
+.limitations-block h1,
+#limitations h4 {
+  text-align: center;
+  font-weight: 100;
+}
+
+span {
+  display: block;
+  font-size: 17px;
+  padding-bottom: 10px;
+}
+
+#payment {
+  margin: auto;
+
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  position: absolute;
+  top: 135%; /* Adjust this value as needed */
+  left: 100;
+  width: 70.5%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border-top: 10px double rgb(234, 220, 250);
+  border-bottom: 10px double rgb(234, 220, 250);
+  border-radius: 25px;
+  background-color: white;
+}
+#payment ul li,
+#limitations ul li {
+  font-size: 17px;
+
+  margin-bottom: 10px;
+}
+
+#process {
+  margin: auto;
+
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  position: absolute;
+  top: 194%; /* Adjust this value as needed */
+  left: 100;
+  width: 70.5%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border-top: 10px double rgb(234, 220, 250);
+  border-bottom: 10px double rgb(234, 220, 250);
+  border-radius: 25px;
+  background-color: white;
+}
+#process img {
+  margin-bottom: 10px;
+}
+
+.limitations-block {
+  margin: auto;
+
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  position: absolute;
+  top: 241%; /* Adjust this value as needed */
+  left: 100;
+  width: 70.5%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border-top: 10px double rgb(234, 220, 250);
+  border-bottom: 10px double rgb(234, 220, 250);
+  border-radius: 25px;
+  background-color: white;
+}
+#limitations {
+  display: flex;
+  justify-content: center;
+}
+#limitations div {
+  width: 50%;
+}

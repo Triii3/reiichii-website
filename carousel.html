@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="carousel_style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="slideshow">
+      <img
+        class="mySlides"
+        src="./comms_open.jpg"
+        alt="commissions open banner"
+        id="comms-open-bannner"
+      />
+      <img
+        class="mySlides"
+        src="./service_rate.jpg"
+        alt="service rate"
+        id="service-rate"
+      />
+      <img
+        class="mySlides"
+        src="./model_samples.jpg"
+        alt="model samples"
+        id="model-samples"
+      />
+      <img
+        class="mySlides"
+        src="./illustrations_samples.jpg"
+        alt="illustration samples"
+        id="illustration samples"
+      />
+    </div>
+    <script>
+      window.addEventListener(
+        "DOMContentLoaded",
+        function (e) {
+          // Original JavaScript code by Chirp Internet: www.chirpinternet.eu
+          // Please acknowledge use of this code by including this header.
+
+          var slideshow = document.getElementById("slideshow");
+          var fadeComplete = function (e) {
+            slideshow.appendChild(arr[0]);
+          };
+          var arr = slideshow.getElementsByTagName("img");
+          for (var i = 0; i < arr.length; i++) {
+            arr[i].addEventListener("animationend", fadeComplete, false);
+          }
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

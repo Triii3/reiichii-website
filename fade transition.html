@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="fade transition_style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="images">
+      <img src="./comms_open.jpg" class="mySlides" id="commsBanner" />
+      <img src="./service_rate.jpg" class="mySlides" id="serviceRate" />
+    </div>
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">
+      &#10094;
+    </button>
+    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">
+      &#10095;
+    </button>
+    <button id="myButton">Fade</button>
+    <script>
+      var slideIndex = 1;
+      // First, set the slideIndex to 1. (First picture)
+      // This variable keeps track of the current slide being displayed.
+      showDivs(slideIndex);
+      // Then call showDivs() to display the first image.
+
+      function plusDivs(n) {
+        // When the user clicks one of the buttons call plusDivs().
+        // The plusDivs() function subtracts one or  adds one to the slideIndex.
+        showDivs((slideIndex += n));
+      }
+
+      function showDivs(n) {
+        // The showDiv() function hides (display="none") all elements with the class name "mySlides",
+        // and displays (display="block") the element with the given slideIndex.
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+          // n = 1, initially; x.length = 2, since there are two img elements with the class "mySlides"
+          // If the slideIndex is higher than the number of elements (x.length), the slideIndex is set to one. Back to the 1st image.
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          // If the slideIndex is less than 1 it is set to number of elements (x.length). Immediately to the last image at the max length.
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+          x[i].style.transition = "opacity 0.4s ease-in-out";
+        }
+
+        x[slideIndex - 1].style.display = "block";
+      }
+
+      let commsBanner = document.getElementById("commsBanner");
+      document.getElementById("myButton").onclick = function () {
+        commsBanner.classList.toggle("fade");
+      };
+    </script>
+  </body>
+</html>
